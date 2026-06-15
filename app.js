@@ -120,4 +120,4 @@ document.getElementById("messageForm").onsubmit = async e => {
   await updateDoc(doc(db, "chats", activeChat.id), {lastMessage:text, updatedAt:serverTimestamp()});
 };
 function formatTime(ts){ return ts?.toDate ? ts.toDate().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"}) : ""; }
-function escapeHtml(text){ return String(text).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m])); }
+function escapeHtml(text){ return String(text).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m])); //test
