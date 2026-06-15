@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Khambir Chat</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="authScreen" class="auth-screen">
+  <div class="auth-card">
+    <div class="logo">K</div>
+    <h1>Khambir</h1>
+    <p>Khambir Messenger</p>
+    <input id="nameInput" placeholder="Your name"/>
+    <input id="emailInput" type="email" placeholder="Email"/>
+    <input id="passwordInput" type="password" placeholder="Password"/>
+    <button id="signupBtn">Create Account</button>
+    <button id="loginBtn">Login</button>
+    <button id="googleBtn" class="google">Continue with Google</button>
+    <p id="authMsg"></p>
+  </div>
+</div>
+
+<div id="appScreen" class="app hidden">
+  <aside class="sidebar">
+    <div class="topbar">
+      <div><h2>Khambir</h2><p id="meName">Loading...</p></div>
+      <button id="logoutBtn">Logout</button>
+    </div>
+    <div class="actions">
+      <button id="newPrivateBtn">+ Private Chat</button>
+      <button id="newGroupBtn">+ Group</button>
+    </div>
+    <input id="searchInput" class="search" placeholder="Search chats..."/>
+    <div id="chatList" class="chat-list"></div>
+  </aside>
+  <main class="chat">
+    <header class="chat-header"><div><h2 id="chatTitle">Select a chat</h2><p id="chatSubtitle">Real-time text chat</p></div></header>
+    <section id="messages" class="messages"><div class="empty">Choose or create a chat</div></section>
+    <form id="messageForm" class="composer">
+      <input id="messageInput" placeholder="Type message..." autocomplete="off"/>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
